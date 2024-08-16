@@ -33,12 +33,18 @@
         }
 
         #paypal-button-container {
-            width: 200px;
+            width: 450px;
             /* Ajusta el ancho del contenedor */
             height: 50px;
             /* Ajusta la altura del contenedor */
             /* Añadir cualquier otro estilo necesario */
         }
+        #tarjeta {
+            width: 400px;
+            /* Ajusta el ancho del contenedor */
+                
+        }
+
     </style>
 </head>
 
@@ -49,7 +55,15 @@
         <h2 class="my-4">Carrito de Compras</h2>
         <div id="cart"></div>
         <h3>Total: <span id="total">0.00</span>€</h3>
+        <br>
+        <div class="mx-auto mb-4 p-4 border" id="tarjeta">
+            <h6>Tarjeta : 4032034262504429</h6>
+            <h6>Caducidad : 09/2029</h6>
+            <h6>CVC: 048</h6>
+        </div>
+
     </div>
+
     <!-- Contenedor para el botón de pagos con Payapl -->
     <div class="container-md mx-auto" id="paypal-button-container"></div>
 
@@ -57,7 +71,7 @@
     <script src="script.js"></script>
     <!-- Código para manejar los pagos con Paypal -->
     <script src="paypal-integration.js"></script>
-   
+
 </body>
 
 </html>
