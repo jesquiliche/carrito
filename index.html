@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Pagos con Paypal-->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=ATeLOVei2MiGOjxk8nGIu3n1gLQhvZM0x4VZoDIvbsXo8gxq9_-d3mK3Zd9dXQR-iwq_o6a51MECmcq3&currency=USD"></script>
+    <style>
+        .product,
+        .cart-item {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .product img,
+        .cart-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img-150 {
+            width: 150px;
+            align-items: center;
+        }
+
+        #paypal-button-container {
+            width: 200px;
+            /* Ajusta el ancho del contenedor */
+            height: 50px;
+            /* Ajusta la altura del contenedor */
+            /* Añadir cualquier otro estilo necesario */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-4">Lista de Productos</h1>
+        <div id="product-list" class="row"></div>
+        <h2 class="my-4">Carrito de Compras</h2>
+        <div id="cart"></div>
+        <h3>Total: <span id="total">0.00</span>€</h3>
+    </div>
+    <!-- Contenedor para el botón de pagos con Payapl -->
+    <div class="container-md mx-auto" id="paypal-button-container"></div>
+
+    <!-- Incluir el archivo JavaScript externo -->
+    <script src="script.js"></script>
+    <!-- Código para manejar los pagos con Paypal -->
+    <script src="paypal-integration.js"></script>
+   
+</body>
+
+</html>
